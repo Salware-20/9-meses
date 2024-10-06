@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(45deg, #EEF6F6, #DDECEE, #BFDBDE, #9DC8CD);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Comic Neue', cursive;
+}
+
+ :root {
+    --loading-width: 160px;
+    --loading-heigth: 23px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    text-align: center;
+    width: 90vw;
+}
+
+.box {
+    display: inline-block;
+    border: solid black 4px;
+    width: var(--loading-width);
+    background-color: white;
+    filter: drop-shadow(0px 9px 10px #000C3D);
+}
+
+.loading-box {
+    height: var(--loading-heigth);
+    width: var(--loading-width);
+    background: linear-gradient(90deg,#000C3D, #4D70FF);  
+    animation: loading 5s;
+}
+
+#state-message {
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(109, 109, 109);
+}
+
+
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--loading-width);
+    }
+}
+
+#title,
+#result {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+#me {
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+.box {
+    margin-top: 3px;
+}
